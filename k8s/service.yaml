@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: webrtc-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: webrtcapi
   ports:
