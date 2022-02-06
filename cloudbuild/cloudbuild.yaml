@@ -22,5 +22,5 @@ steps:
   args:
   - run
   - --filename=k8s
-  - --location=${_CLOUDSDK_COMPUTE_ZONE}
-  - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
+  - --location=us-central1
+  - --cluster=autopilot-cluster-1
