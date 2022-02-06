@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: webrtcapi
-        image: gcr.io/$PROJECT_ID/$REPO_NAME:$BUILD_ID
+        image: gcr.io/plated-shelter-329723/webrtcapi:@BUILD_ID@
         ports:
         - containerPort: 8080
