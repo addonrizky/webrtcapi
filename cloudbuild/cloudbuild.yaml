@@ -1,0 +1,9 @@
+timeout: 900s
+steps:
+# Docker Build
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 
+         'gcr.io/$PROJECT_ID/$REPO_NAME:$BUILD_ID', '.']
+# Docker push where to go??
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/$REPO_NAME:$BUILD_ID']
