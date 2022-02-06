@@ -22,6 +22,5 @@ steps:
   args:
   - run
   - --filename=k8s/deployment.yaml
-  - --image=gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA
   - --location=${_CLOUDSDK_COMPUTE_ZONE}
   - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
