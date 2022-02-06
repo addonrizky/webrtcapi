@@ -7,3 +7,12 @@ steps:
 # Docker push where to go??
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/$REPO_NAME:$BUILD_ID']
+# Deploy to kubernetes
+# deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=k83/deployment.yaml
+  - --image=gcr.io/$PROJECT_ID/$REPO_NAME:$BUILD_ID
+  - --location=${_CLOUDSDK_COMPUTE_ZONE}
+  - --cluster=${_CLOUDSDK_CONTAINER_CLUSTER}
