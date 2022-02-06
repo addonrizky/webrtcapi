@@ -19,17 +19,4 @@ spec:
         image: gcr.io/plated-shelter-329723/webrtcapi:@BUILD_ID@
         ports:
         - containerPort: 8080
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: webrtcapi-http
-  namespace: development
-spec:
-  selector:
-     run: webrtcapi
-  ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
-  type: NodePort
+          name: http
