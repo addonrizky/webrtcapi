@@ -16,7 +16,7 @@ steps:
   args: 
     - '-c'
     - |
-      sed -i "s#@BUILD_ID@#$BUILD_ID#g" k8s/development/deployment.yaml
+      sed -i "s#@BUILD_ID@#$BUILD_ID#g" k8s/deployment.yaml
 # deploy container image to GKE
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
